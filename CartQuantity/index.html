@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable</title>
+</head>
+<body>
+
+    <!------A cart project-->
+    <h2>Cart Quantity</h2>
+
+     <!------An oclcik button to show the value passed in the variable cartQuantity-->
+    <button  onclick="
+        console.log(cartQuantity);
+    "
+    
+    >Show Quantity</button>  
+
+
+<!-------The value was increased +1 where for every click the value gets added to 1-->
+     <button onclick="
+      cartQuantity += 1
+     console.log(cartQuantity);"
+         >Add to Cart</button>  
+<!-------The value was increased, where for every click the value gets added by 2-->
+      <button onclick=" 
+       cartQuantity += 2
+      console.log(cartQuantity);"
+      >+2</button>    
+<!-------The value was increased, where for every click the value gets added by 3-->
+    <button  onclick="
+     cartQuantity += 3
+    console.log(cartQuantity);"
+    >+3</button>    
+<!-------The value was increased, where for every click the value gets multiply by 0 to reset the value-->
+  <button  onclick="
+  cartQuantity *= 0
+    console.log(cartQuantity);"
+  >Reset cart</button>
+
+
+    <script>
+      
+        let cartQuantity = 0
+
+    </script>
+</body>
+</html>
