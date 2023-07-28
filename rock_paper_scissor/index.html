@@ -6,37 +6,62 @@
     <title>rock ,paper,scissor</title>
 </head>
 <body>
-    <script>
-        // show a value is true
-        true;
-        // show a value false
-        false;
-  
-        //example
-        console.log(3 > 5); //false
-  
-        // lets check if someone if is old enough to drive
-  
-        //under age
-        if(12 >= 18){
-              console.log('you can drive');
-        }else{
-          console.log('sorry,sorry,dont cry, but you cant drive');
-        }
-        // old enough
-  
-        //lets store the value in a variable
-  
-        const age = 18
-         if(age >= 18){
-                console.log('you can freely drive');
-         }else if( age >= 17){
-          console.log('you can freely drive , but dont');
-         }
-         else{
-          console.log('stay home for your safer');
-         }
-  
-      </script>
+   <p>ROck paper scissor</p>
+ 
+<button
+onclick="
+//a Math.random give   a value btw a 0 and 1 , that is 0 >= ? <= 1
+// we checck if the value of rock which is btw 0 and 1/3
+// we checck if the value of rock is btw 0 and 1
+//I created  a computerMove where it generates a random number for each move i make
+const randomNumber=Math.random();
+
+let computerMove = '';
+// created a variable for the computerMove and set it to an empty string 
+
+
+if(randomNumber >= 0 && randomNumber < 1/3){
+    //if the condition is true then the result is rock
+     computerMove='rock'
+}else if(randomNumber >= 1/3 && randomNumber < 2/3){
+    //if the condition is  true then the result is  paper
+    computerMove='paper'
+}else if(randomNumber >= 2/3 && randomNumber < 1){
+    //if the condition is true then the result is scissor
+    computerMove='scissor'
+}
+
+//Our move , where which eva one we choose should be equal to the computer move or not
+let result = ''
+
+if(computerMove === 'rock'){
+        result = 'Tie'
+}else if(computerMove === 'paper'){
+      result = 'You lose'
+}else if(computerMove === 'scissor'){
+       result = 'Yo Win'
+}
+
+//let display or results in a popup
+alert(`You choose Rock, computerMove is ${computerMove} ${result}`)
+
+">
+Rock
+</button>
+
+
+<button>
+paper
+</button>
+
+
+<button>
+ scissor
+</button>
+
+
+<script>
+
+</script>
 </body>
 </html>
