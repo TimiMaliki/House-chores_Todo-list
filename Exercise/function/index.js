@@ -50,12 +50,11 @@ greet();
 //solution
 
 function convertToFahrenheit(celsius) {
-  console.log((celsius * 9) / 5 + 32);
+  return(celsius * 9) / 5 + 32;
 
-  return celsius;
 }
 
-convertToFahrenheit(25);
+// convertToFahrenheit(25);
 
 /**
  * (7e) create a function convertToCelsius(fahrenheit) that takes anumber in fahrenheit and returns anumber in degree celsius
@@ -66,10 +65,10 @@ convertToFahrenheit(25);
 //solution
 
 function convertToCelsius(fahrenheit) {
-  console.log(((fahrenheit - 32) * 5) / 9);
+ return  (fahrenheit - 32) * 5 / 9;
 }
 
-convertToCelsius(86);
+// convertToCelsius(86);
 
 /**
  * (7f) create a function "convertTemperature(degree,unit)" that takes a number and a unit ('c','f'),
@@ -80,12 +79,18 @@ convertToCelsius(86);
  */
          
 //solution
-// function converTemperature(degree, unit = "f") {
-//   console.log((degree-25) + unit);
-// }
-// converTemperature(102);
+ 
+function convertTemperature(degree, unit){
 
-function converTemperature(degree, unit = "c") {
-    console.log((degree- 86) + unit);
-  }
-  converTemperature(116);
+    if(unit === 'C'){
+            const result =  convertToFahrenheit(degree);
+
+          return  `${result}F`
+    }else if(unit === 'F'){
+             const result = convertToCelsius(degree)
+        return     `${result}C`
+    }
+}
+
+console.log(convertTemperature(25 ,'C'));
+console.log(convertTemperature(86 ,'F'));
