@@ -9,13 +9,77 @@
     <p>YouTube Subscribe Button</p>
     <button onclick="subscribeButton()" class="button">Subscribe</button>
 
+    <br /><br /><br /><br />
+
+    <button onclick="gamePlay('Rock')">Rock</button>
+    <button onclick="gamePlay('Paper')">Paper</button>
+    <button onclick="gamePlay('Scissor')">Scissors</button>
+
+    <br /><br /><br />
+
+    <p class="text"></p>
+
+    <button>Reset Score</button>
+
     <script>
       const btn = document.querySelector(".button");
+      const display = document.querySelector(".text");
 
       function subscribeButton() {
         btn.innerText =
           btn.innerText === "Subscribe" ? "Subscribed" : "Subscribe";
       }
+
+      function computerMove() {
+        const randomNumber = Math.random();
+
+        let computerPlay = "";
+
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerPlay = "Rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerPlay = "Paper";
+        } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+          computerPlay = "Scissor";
+        }
+
+        return computerPlay;
+      }
+
+      function gamePlay(play) {
+        computerPlay = computerMove();
+
+        let player = "";
+
+        if (play === "Rock") {
+          if (computerPlay === "Rock") {
+            player = "You Tie";
+          } else if (computerPlay === "Scissor") {
+            player = "You Win";
+          } else if (computerPlay === "Paper") {
+            player = "You lose";
+          }
+        }else if(play === "Scissor"){
+            if(computerPlay === "Rock") {
+            player = "You lose";
+          } else if (computerPlay === "Scissor") {
+            player = "You Tie";
+          } else if (computerPlay === "Paper") {
+            player = "You Win";
+          }
+        }else if(play === "Paper"){
+            if(computerPlay === "Rock") {
+            player = "You Win";
+          } else if (computerPlay === "Scissor") {
+            player = "You Lose";
+          } else if (computerPlay === "Paper") {
+            player = "You Tie";
+          }
+        }
+
+        display.innerHTML = `You play:${play} , The Computer played:${computerPlay} , Result:${player}`;
+      }
+      //let display or results in innerText
     </script>
   </body>
 </html>
