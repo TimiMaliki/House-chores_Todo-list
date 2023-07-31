@@ -28,7 +28,7 @@
        <p>Amazon Shipping Calculator</p>
        <p>orders under $40 = $10 shipping</p>
 
-       <input type="number" class="inputForm" value=""> <button onclick="inputFunction()">Calculate</button>
+       <input type="number" class="inputForm" value="" onkeydown="onKey()"> <button onclick="inputFunction()">Calculate</button>
        <p class="valueOfCalculation"></p>
 
     <script>
@@ -54,10 +54,14 @@
                 cost += 10
         }else if(cost >= 50){
              cost *= 1
-        }
-
+        }   
         showValue.innerHTML = `You Shipping fee is ${cost}`
+      }
 
+      function onKey(){
+        if(event.key === "Enter"){
+            inputFunction()
+        }
       }
 
     
