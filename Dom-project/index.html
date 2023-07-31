@@ -20,21 +20,23 @@
     <p class="text"></p>
 
 
-    <br><br><br><br><br>
+    <br><br><br>
 
-    <p class="score">
-        
-    </p>
+    <p class="score"></p>
+   <button onclick="resetBtn()">Reset Score</button>
 
-    <button onclick="
-     resetBtn()
-    ">Reset Score</button>
+       <p>Amazon Shipping Calculator</p>
+       <p>orders under $40 = $10 shipping</p>
+
+       <input type="number" class="inputForm" value=""> <button onclick="inputFunction()">Calculate</button>
+       <p class="valueOfCalculation"></p>
 
     <script>
       const btn = document.querySelector(".button");
       const display = document.querySelector(".text");
       const scoreStore = document.querySelector(".score")
-    //   const resetBtn = document.querySelector(".resetButton")
+      const showValue = document.querySelector(".valueOfCalculation")
+      
 
       score={
             win:0,
@@ -42,6 +44,23 @@
             tie:0,
       }
 
+      //shipping function
+
+
+      function inputFunction(){
+        const  inputValue =  document.querySelector(".inputForm")
+                   let cost =Number(inputValue.value)
+        if(cost < 40){
+                cost += 10
+        }else if(cost >= 50){
+             cost *= 1
+        }
+
+        showValue.innerHTML = `You Shipping fee is ${cost}`
+
+      }
+
+    
    
 
       function subscribeButton() {
