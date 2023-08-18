@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./todo.css">
 </head>
 <body>
-   
+   <div class="todo-container">
+      <h1>House Chores List 2023</h1>
+      <form id="new-task-form">
+        <input type="text"
+        id="new-task-input"
+        placeholder="What have you planned for today"/>
+         
+        <input type="submit" value="Add Task"
+        id="new-task-submit">
+
+      </form>
+
+      <section class="task-list">
+        <h2>Tasks</h2>
+         <div id="tasks">
+                <div class="task">
+                  <div class="content">
+                      <input type="text" 
+                      class="text"
+                      value="my task">
+                  </div>
+                  <div class="btn-actions">
+                      <button class="delete">Delete</button>
+                  </div>
+                </div>
+         </div>
+         </section>
+   </div>
+
+ 
+    <script src="./index.js"></script>
 </body>
 </html>
