@@ -9,7 +9,7 @@
     display: grid;
     place-content: center;
     color: var(--white);
-	background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(./chores.jpg);
+	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(./chores.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,6 +25,11 @@
 	--purple: #8B5CF6;
     --white: #fff;
 	--light: #EEE;
+}
+a{
+	transform: translateY(-90px);
+	text-decoration: none;
+	font-size: 21px;
 }
 .todo-container{
     width: 600px;
@@ -91,7 +96,6 @@ input, button {
 	margin-bottom: 1rem;
     text-align: center;
 }
-
 #tasks .task {
 	display: flex;
 	justify-content: space-between;
@@ -113,16 +117,13 @@ input, button {
 	transition: 0.4s;
 }
 
-.task .content .text:not(:read-only) {
-	color: var(--pink);
-}
 
-.task .btn-actions {
+.task , .btn-actions {
 	display: flex;
 	margin: 0 -0.5rem;
 }
 
-.task .btn-actions button {
+.task ,.btn-actions ,button {
 	cursor: pointer;
 	margin: 0 0.5rem;
 	font-size: 1.125rem;
@@ -131,20 +132,14 @@ input, button {
 	transition: 0.4s;
 }
 
-.task .btn-actions button:hover {
+.task  ,.btn-actions, button:hover {
 	opacity: 0.8;
 }
 
-.task .btn-actions button:active {
+.task , .btn-actions ,button:active {
 	opacity: 0.6;
 }
 
-.task .btn-actions .edit {
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.task .btn-actions .delete {
+.task , .btn-actions ,.delete {
 	color: crimson;
 }
