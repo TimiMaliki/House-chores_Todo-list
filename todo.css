@@ -9,7 +9,7 @@
     display: grid;
     place-content: center;
     color: var(--white);
-	background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url(./chores.jpg);
+	background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url(./c.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,9 +27,15 @@
 	--light: #EEE;
 }
 a{
-	transform: translateY(-90px);
+	transform: translateY(-130px);
+	width: 65px;
+	margin-left: -12rem;
 	text-decoration: none;
-	font-size: 21px;
+	font-size: 25px;
+	background-image: linear-gradient(to right, var(--pink), var(--light));
+}
+a:hover{
+	background-image: linear-gradient(to right, var(--pink), var(--purple));
 }
 .todo-container{
     width: 600px;
@@ -38,7 +44,7 @@ a{
 h1{
     margin-bottom: 3rem;
     text-align: center;
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    /* background-image: linear-gradient(to right, var(--pink), var(--purple)); */
 }
 #new-task-form {
 	display: flex;;
