@@ -5,7 +5,7 @@
 }
 body {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background: #f0f2f5;
 }
 .container {
@@ -97,12 +97,12 @@ p a {
   font-size: 18px;
   font-weight: 200;
 }
-.forgot :hover{
+.forgot :hover {
   border-bottom: 1px solid rgb(16, 16, 160);
   transition: all 0.5s ease;
 }
-.new_padding{
- align-content: center;
+.new_padding {
+  align-content: center;
   padding: 0px 50px;
 }
 .border {
@@ -127,47 +127,26 @@ p a {
   color: #fff;
   font-size: 19px;
 }
-.link_text{
+.link_text {
   cursor: pointer;
   width: 100%;
 }
-.page{
+.page {
   font-weight: bold;
   color: #000;
 }
-.link_text a{
+.link_text a {
   font-size: 14px;
   width: 300px;
   word-spacing: 2px;
 }
 footer {
-  width: 100%;
-  height: 200px;
-  margin-top: 15rem;
   background: #fff;
+  margin-top: 20rem;
   padding: 0px 80px;
 }
-/* .lang_wrapper{
-  margin-bottom: 1rem;
-} */
-.lang,
-.other_links {
-  display: flex;
-  justify-content:space-evenly;
-  padding: 20px;
-}
-.lang a:hover{
-  border-bottom: 2px solid black;
-  transition: all 0.5s ease;
-}
-.other_links {
-  word-spacing: 3px;
-}
-.lang a,
-.link a {
-  text-decoration: none;
-  font-size: 15px;
-  color: #111;
+.footer-container{
+  padding: 30px 50px;
 }
 
 .divider {
@@ -175,13 +154,22 @@ footer {
   width: 100%;
   margin-bottom: 1rem;
 }
+.lang a ,.link a{
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+  width: 100%;
+  padding: 10px;
+}
 @media (max-width: 800px) {
   .content-wrapper {
     display: grid;
     width: 100%;
     padding: 0px 70px;
   }
-  .vermillion ,   .form{
+  .vermillion,
+  .form {
     width: 100%;
   }
 
+}
