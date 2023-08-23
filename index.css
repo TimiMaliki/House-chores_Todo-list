@@ -90,7 +90,6 @@ input::placeholder {
   text-align: center;
   text-decoration: none;
   margin-bottom: 2rem;
-  transition: 0.5s  all ease-in;
 }
 p a {
   text-decoration: none;
@@ -100,7 +99,7 @@ p a {
 }
 .forgot :hover{
   border-bottom: 1px solid rgb(16, 16, 160);
-  transition: 0.5s all ease-in;
+  transition: all 0.5s ease;
 }
 .new_padding{
  align-content: center;
@@ -148,12 +147,18 @@ footer {
   background: #fff;
   padding: 0px 80px;
 }
+/* .lang_wrapper{
+  margin-bottom: 1rem;
+} */
 .lang,
 .other_links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   padding: 20px;
-  word-spacing: 2px;
+}
+.lang a:hover{
+  border-bottom: 2px solid black;
+  transition: all 0.5s ease;
 }
 .other_links {
   word-spacing: 3px;
@@ -176,4 +181,7 @@ footer {
     width: 100%;
     padding: 0px 70px;
   }
-}
+  .vermillion ,   .form{
+    width: 100%;
+  }
+
