@@ -73,7 +73,7 @@ input::placeholder {
   border: none;
   border-radius: 9px;
   height: 45px;
-  background: rgb(15, 15, 212);
+  background: rgb(81, 81, 224);
   align-items: center;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -129,7 +129,7 @@ p a {
 }
 span {
   font-weight: bold;
-  color: purple;
+  color: #000;
 }
 footer {
   width: 100%;
