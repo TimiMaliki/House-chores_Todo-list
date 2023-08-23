@@ -90,12 +90,17 @@ input::placeholder {
   text-align: center;
   text-decoration: none;
   margin-bottom: 2rem;
+  transition: 0.5s  all ease-in;
 }
 p a {
   text-decoration: none;
-  color: blue;
+  color: rgb(16, 16, 160);
   font-size: 18px;
   font-weight: 200;
+}
+.forgot :hover{
+  border-bottom: 1px solid rgb(16, 16, 160);
+  transition: 0.5s all ease-in;
 }
 .new_padding{
  align-content: center;
@@ -123,13 +128,18 @@ p a {
   color: #fff;
   font-size: 19px;
 }
-.house {
-  font-size: 17px;
+.link_text{
   cursor: pointer;
+  width: 100%;
 }
-span {
+.page{
   font-weight: bold;
   color: #000;
+}
+.link_text a{
+  font-size: 14px;
+  width: 300px;
+  word-spacing: 2px;
 }
 footer {
   width: 100%;
