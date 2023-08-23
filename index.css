@@ -17,16 +17,17 @@ body {
   margin-top: 3rem;
   display: flex;
   justify-content: space-around;
+  padding: 0px 50px;
 }
 .vermillion {
-  width: 300px;
+  width: 60%;
   height: 400px;
   margin-top: 3rem;
   place-content: center;
-  padding: 100px 20px;
+  padding: 100px 80px;
 }
 .vermillion h1 {
-  color: blueviolet;
+  color: rgb(81, 81, 224);
   text-align: start;
   font-size: 58px;
   letter-spacing: 2px;
@@ -61,12 +62,12 @@ input {
   appearance: none;
   cursor: pointer;
   font-size: 20px;
+  padding: 0px 20px;
 }
 input::placeholder {
   font-size: 16px;
   width: 100%;
   text-align: start;
-
 }
 .log_in {
   border: none;
@@ -96,17 +97,20 @@ p a {
   font-size: 18px;
   font-weight: 200;
 }
+.new_padding{
+  flex-direction: column;
+}
 .border {
-  border: 1px solid #f0f2f5;
+  border: 2px solid #f0f2f5;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
 }
 .btn {
   border: none;
   border-radius: 9px;
   width: 200px;
   height: 45px;
-  background: rgb(175, 175, 40);
+  background: rgb(8, 173, 8);
   cursor: pointer;
   margin-left: 2.5rem;
   margin-bottom: 4rem;
