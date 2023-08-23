@@ -98,7 +98,8 @@ p a {
   font-weight: 200;
 }
 .new_padding{
-  flex-direction: column;
+ align-content: center;
+  padding: 0px 50px;
 }
 .border {
   border: 2px solid #f0f2f5;
@@ -112,7 +113,7 @@ p a {
   height: 45px;
   background: rgb(8, 173, 8);
   cursor: pointer;
-  margin-left: 2.5rem;
+  /* margin-left: 2.5rem; */
   margin-bottom: 4rem;
 }
 .btn p {
