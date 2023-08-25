@@ -153,13 +153,17 @@ footer {
   padding: 10px 60px;
 }
 .footer-link {
-  padding: 10px 60px;
+  padding: 10px 90px;
 }
 a {
   padding: 0px 30px;
   color: #535353;
   padding: 5px;
   text-decoration: none;
+}
+a:hover{
+  border-bottom: 1px solid #000;
+  transition: all 0.5s ease-in;
 }
 
 @media (max-width: 800px) {
