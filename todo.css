@@ -9,7 +9,7 @@
     display: grid;
     place-content: center;
     color: var(--white);
-	background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url(./c.png);
+	background: #000;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -31,8 +31,9 @@ a{
 	width: 65px;
 	margin-left: -12rem;
 	text-decoration: none;
-	font-size: 25px;
-	background-image: linear-gradient(to right, var(--pink), var(--light));
+	font-size: 22px;
+	color: #fff;
+	/* background-image: linear-gradient(to right, var(--pink), var(--light)); */
 }
 a:hover{
 	background-image: linear-gradient(to right, var(--pink), var(--purple));
