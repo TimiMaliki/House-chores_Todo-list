@@ -42,7 +42,6 @@ newTaskSubmit.addEventListener("click", (e) => {
   listEl.appendChild(taskEl);
 
 
-  taskContentEl
 
 //the delete button eventlistener
   deleteEl.addEventListener('click' , (e) =>{
