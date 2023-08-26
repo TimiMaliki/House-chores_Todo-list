@@ -150,3 +150,6 @@ input, button {
 .task , .btn-actions ,.delete {
 	color: crimson;
 }
+@media(max-width:800px){
+	
+}
