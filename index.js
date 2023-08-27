@@ -12,7 +12,7 @@ newTaskSubmit.addEventListener("click", (e) => {
   input.value = "";
  // if user hasnt filled anything alert
   if (!task) {
-    alert("fill the form");
+    alert("please, fill the form!");
     return;
   }
 

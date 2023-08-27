@@ -9,7 +9,7 @@
     display: grid;
     place-content: center;
     color: var(--white);
-	background: #000;
+	background: radial-gradient(96.32% 571.83% at 98.4% 19.88%, #8FB3FF 0%, #9D6BE8 27.72%, #DE2778 54.29%, #B03DE2 100%);;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,20 +66,22 @@ input, button {
 	border-radius: 1rem;
 	margin-right: 1rem;
 	color: var(--light);
-	font-size: 1.25rem;
+	font-size: 1.05rem;
 }
 
 #new-task-input::placeholder {
 	color: var(--grey);
+	padding: 0px 20px;
 }
 
 #new-task-submit {
-	color: var(--pink);
+	/* color: var(--pink); */
+	color: #000;
 	font-size: 1.25rem;
 	font-weight: 700;
-	background-image: linear-gradient(to right, var(--pink), var(--purple));
+	/* background-image: linear-gradient(to right, var(--pink), var(--purple));
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent; */
 	cursor: pointer;
 	transition: 0.4s;
 }
@@ -151,5 +153,40 @@ input, button {
 	color: crimson;
 }
 @media(max-width:800px){
-	
+	.todo-container{
+		width: 300px;
+		height: 400px;
+	}
+	a{
+		margin-top: -4rem;
+		transform: translateX(70px);
+	}
+	a:hover{
+		background: none;
+	}
+	#new-task-form{
+		width: 100%;
+		display: grid;
+	}
+	#new-task-input{
+		width: 100%;
+		flex: 1 1 0%;
+		margin-bottom: 2rem;
+	}
+	.task-list{
+		margin-top: 2rem;
+	}
+	#tasks{
+		width: 100%;
+		flex: 1 1 0%;
+	}
+}
+@media(max-width:600px){
+	a{
+		margin-top: -4rem;
+		transform: translateX(200px);
+	}
+	a:hover{
+		background: none;
+	}
 }
