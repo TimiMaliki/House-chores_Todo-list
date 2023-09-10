@@ -1,3 +1,17 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB8vPPuayzoZ9mFL7VUGgaBtzd6PxBaSBk",
+  authDomain: "personal-todo-project.firebaseapp.com",
+  projectId: "personal-todo-project",
+  storageBucket: "personal-todo-project.appspot.com",
+  messagingSenderId: "472975031744",
+  appId: "1:472975031744:web:043e9a3ae3403bfb281c25",
+  measurementId: "G-2N0F4E6JZF"
+};
+
+
+
+
 const form = document.getElementById("new-task-form");
 const input = document.getElementById("new-task-input");
 const listEl = document.querySelector("#tasks");
@@ -22,7 +36,7 @@ if (!task) {
   return;
 }
 
-
+ 
 
 const taskEl = document.createElement("div"); //createElement allows me to create DOM notes
 // that creates the task form
