@@ -11,9 +11,28 @@ const firebaseConfig = {
 
 
 //firebase imports
-import {initializeApp } from 'firebase'
+import {initializeApp } from 'firebase/app'
+import {getFirestore,collection, getDocs} from 'firebase/firestore'
+
+//invoking the firebase import
+
+initializeApp(firebaseConfig)
 
 
+//initialize the service we want
+
+const db = getFirestore()
+
+//collection ref
+
+const colRef = collection(db , 'Plans')
+
+//collection data
+
+getDocs(colRef)
+.then((snapshot) =>{
+  console.log(snapshot.docs)
+})
 
 const form = document.getElementById("new-task-form");
 const input = document.getElementById("new-task-input");
@@ -83,8 +102,4 @@ listEl.appendChild(taskEl);
   
 });
 
-
-//invoking the firebase import
-
-initializeApp(firebaseConfig)
 
