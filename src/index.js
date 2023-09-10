@@ -10,6 +10,9 @@ const firebaseConfig = {
 };
 
 
+//firebase imports
+import {initializeApp } from 'firebase'
+
 
 
 const form = document.getElementById("new-task-form");
@@ -81,5 +84,7 @@ listEl.appendChild(taskEl);
 });
 
 
+//invoking the firebase import
 
+initializeApp(firebaseConfig)
 
