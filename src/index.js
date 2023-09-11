@@ -1,38 +1,4 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB8vPPuayzoZ9mFL7VUGgaBtzd6PxBaSBk",
-  authDomain: "personal-todo-project.firebaseapp.com",
-  projectId: "personal-todo-project",
-  storageBucket: "personal-todo-project.appspot.com",
-  messagingSenderId: "472975031744",
-  appId: "1:472975031744:web:043e9a3ae3403bfb281c25",
-  measurementId: "G-2N0F4E6JZF"
-};
 
-
-//firebase imports
-import {initializeApp } from 'firebase/app'
-import {getFirestore,collection, getDocs} from 'firebase/firestore'
-
-//invoking the firebase import
-
-initializeApp(firebaseConfig)
-
-
-//initialize the service we want
-
-const db = getFirestore()
-
-//collection ref
-
-const colRef = collection(db , 'Plans')
-
-//collection data
-
-getDocs(colRef)
-.then((snapshot) =>{
-  console.log(snapshot.docs)
-})
 
 const form = document.getElementById("new-task-form");
 const input = document.getElementById("new-task-input");
@@ -87,12 +53,6 @@ taskEl.appendChild(deleteEl);
 listEl.appendChild(taskEl);
 
 
-
-
-
-
-
-
 //the delete button eventlistener
   deleteEl.addEventListener('click' , (e) =>{
     if(deleteEl !== taskEl){
@@ -100,6 +60,49 @@ listEl.appendChild(taskEl);
     }
   })
   
+
 });
+
+
+
+
+//firebase imports
+import {initializeApp } from 'firebase/app'
+import {getFirestore,collection, getDocs} from 'firebase/firestore'
+
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB8vPPuayzoZ9mFL7VUGgaBtzd6PxBaSBk",
+  authDomain: "personal-todo-project.firebaseapp.com",
+  projectId: "personal-todo-project",
+  storageBucket: "personal-todo-project.appspot.com",
+  messagingSenderId: "472975031744",
+  appId: "1:472975031744:web:043e9a3ae3403bfb281c25",
+  measurementId: "G-2N0F4E6JZF"
+};
+
+
+
+
+//invoking the firebase import
+
+initializeApp(firebaseConfig)
+
+
+//initialize the service we want
+
+const db = getFirestore()
+
+//collection ref
+
+const colRef = collection(db , 'Plans')
+
+//collection data
+
+getDocs(colRef)
+.then((snapshot) =>{
+  console.log(snapshot.docs)
+})
 
 
