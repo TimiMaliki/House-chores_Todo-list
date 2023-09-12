@@ -1,3 +1,41 @@
+import {initializeApp} from 'firebase/app'
+import {getFirestore,collection, getDocs, addDoc , deleteDoc ,doc} from 'firebase/firestore'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB8vPPuayzoZ9mFL7VUGgaBtzd6PxBaSBk",
+    authDomain: "personal-todo-project.firebaseapp.com",
+    projectId: "personal-todo-project",
+    storageBucket: "personal-todo-project.appspot.com",
+    messagingSenderId: "472975031744",
+    appId: "1:472975031744:web:043e9a3ae3403bfb281c25",
+    measurementId: "G-2N0F4E6JZF"
+  };
+
+  // init firebase app
+initializeApp(firebaseConfig)
+
+//init serveices
+ const db = getFirestore()
+
+ //collection ref
+
+ const colRef = collection(db , 'Plans')
+
+ //get collection data
+
+ getDocs(colRef)
+ .then((snapshot)=>{
+   let todos = []
+
+   snapshot.docs.forEach((doc) =>{
+    todos.push({...doc.data() , id: doc.id})
+   })
+   console.log(todos)
+ })
+ .catch((err) =>{
+      console.log(err.message)
+ })
+
 
 
 const form = document.getElementById("new-task-form");
@@ -6,16 +44,21 @@ const listEl = document.querySelector("#tasks");
 const newTaskSubmit = document.getElementById("new-task-submit");
 
  
- 
+ //need to add a local storage
 
 //the add-task submit form  eventListener to add new tasks
 newTaskSubmit.addEventListener("click", (e) => {
   e.preventDefault(); //to prevent onreload submit to page
-   task = input.value; // the input.value are the texts you provide in the input form
+  const task = input.value; // the input.value are the texts you provide in the input form
 
   input.value = ""
 
-
+addDoc(colRef , {
+    workout:task
+})
+.then(() => {
+    task.reset()
+})
 
 
 // if user hasnt filled anything alert
@@ -58,51 +101,22 @@ listEl.appendChild(taskEl);
     if(deleteEl !== taskEl){
         listEl.removeChild(taskEl)
     }
+
+    const docRef = doc(db, 'Plans' , task.id.value)
+
+    deleteDoc(docRef)
+     .then(() => {
+        task.reset()
+     })
   })
   
 
+
+
+
+
+
 });
 
-
-
-
-//firebase imports
-import {initializeApp } from 'firebase/app'
-import {getFirestore,collection, getDocs} from 'firebase/firestore'
-
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB8vPPuayzoZ9mFL7VUGgaBtzd6PxBaSBk",
-  authDomain: "personal-todo-project.firebaseapp.com",
-  projectId: "personal-todo-project",
-  storageBucket: "personal-todo-project.appspot.com",
-  messagingSenderId: "472975031744",
-  appId: "1:472975031744:web:043e9a3ae3403bfb281c25",
-  measurementId: "G-2N0F4E6JZF"
-};
-
-
-
-
-//invoking the firebase import
-
-initializeApp(firebaseConfig)
-
-
-//initialize the service we want
-
-const db = getFirestore()
-
-//collection ref
-
-const colRef = collection(db , 'Plans')
-
-//collection data
-
-getDocs(colRef)
-.then((snapshot) =>{
-  console.log(snapshot.docs)
-})
 
 
