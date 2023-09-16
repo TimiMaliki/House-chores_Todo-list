@@ -72,7 +72,6 @@ if (!task) {
 const taskEl = document.createElement("div"); //createElement allows me to create DOM notes
 // that creates the task form
 taskEl.classList.add("task"); //added the class of task
- localStorage.setItem('tasks' , task)
 const taskContentEl = document.createElement("div");//createElement allows me to create DOM notes
 taskContentEl.classList.add("content");//added the class of content
 taskContentEl.innerHTML = task; // the textContent should be equall to inputvalue
@@ -117,6 +116,24 @@ listEl.appendChild(taskEl);
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
