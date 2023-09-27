@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <title>Firebase-Todo</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-<body> 
 
-    <a href="./index.html" class="home">Home</a>
+<body>
+    <div class="title flex">
+        <h2>Todo App</h2>
+    </div>
 
-   <div class="todo-container">
-      <h1>My To-Do List 2023</h1>
-      <form id="new-task-form">
-        <input type="text"
-        id="new-task-input"
-        placeholder="What have you planned for today"/>
-         
-        <input type="submit" value="Add Task"
-        id="new-task-submit">
+    <div class="todo-container flex">
+        <div class="todo-input">
+            <input type="text" placeholder="Add a task" class="input-todo-value">
+            <button class="add-button">Add</button>
+        </div>
+    </div>
 
-      </form>
+    <div class="wrapper ">
 
-      <section class="task-list">
-     <h2>Tasks</h2>
-           <div id="tasks">
-            <!---visual display-->
-               <!--   <div class="task">
-                  <div class="content">
-                      <input type="text" 
-                      class="text"
-                      value="my task">
-                  </div>
-                  <div class="btn-actions">
-                      <button class="delete">Delete</button>
-                  </div>
-                </div> -->
-         </div> 
-         </section>
-   </div>
+    </div>
+    </div> 
 
- 
+
     <script src="./bundle.js"></script>
 </body>
+
 </html>
