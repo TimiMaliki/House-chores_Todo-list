@@ -1,6 +1,5 @@
-const addBtn = document.querySelector(".add-button");
-
-
+const addBtn = document.querySelector(".add-btn");
+const deleteButton = document.querySelector(".delete")
 import { initializeApp } from "firebase/app";
 
 import {
@@ -8,6 +7,7 @@ import {
   collection,
   onSnapshot,
   addDoc,
+  deleteDoc,
   doc,
 } from "firebase/firestore";
 
@@ -24,7 +24,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const db = getFirestore();
-const colRef = collection(db, "lists");
+const colRef = collection(db, "task-todo");
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -35,9 +35,9 @@ addBtn.addEventListener("click", (e) => {
 
     return;
   }
-
+  document.querySelector(".input-todo-value").value = "";
   addDoc(colRef, {
-    text,
+    text: text,
   });
 });
 
@@ -59,11 +59,14 @@ function generateItems(tasks) {
     console.log(item);
 
     itemsHtml += `
-     
-     <div class="wrapper ">
-        ${item.text}
-       
+
+   
+    <div class="wrapper flex-input">
+   
+       <div class="text" id="id">${item.text}</div>
+       ${deleteButton('delete')}
     </div>
+ 
      `;
   });
 
@@ -71,3 +74,39 @@ function generateItems(tasks) {
 }
 
 getItems();
+
+
+deleteButton.addEventListener("click", (e)=>{
+  e.preventDefault();
+
+  console.log('hello')
+
+  let id = e.target.parentElement
+
+  console.log(id)
+
+
+})
+
+
+
+
+
+// function deleteButton() {
+
+//   document.querySelector(".delete").addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     let id = e.target.parentElement
+
+//   });
+  
+// }
+
+
+// tasks.forEach((item) => {
+
+//   const deleteRef = doc(db, "task-todo", item.id);
+
+//   deleteDoc(deleteRef);
+// });

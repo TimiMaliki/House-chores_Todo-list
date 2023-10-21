@@ -1,98 +1,70 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
-  width: 100%;
+  min-width: 100%;
   height: 100vh;
-}
-.flex {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  margin-top: 9rem;
 }
-.title {
-  padding: 3rem;
-  font-size: 2rem;
+.task-input {
+  width: 400px;
+  height: 50px;
 }
-.todo-container {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+.flex-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
 }
 input {
-  width: 400px;
-  height: 55px;
-  position: relative;
-  padding: 0px 90px;
-  border: 1px solid mediumslateblue;
-  outline: none;
-  font-size: 19px;
-  border-radius: 12px;
-}
-input::placeholder {
-  font-size: 1rem;
-  padding: 0px 50px;
-}
-.add-button {
-  width: 120px;
-  height: 50px;
+  width: 100%;
+  height: 45px;
   border-radius: 9px;
-  background: mediumslateblue;
-  border: none;
-  cursor: pointer;
+  border: 2px solid skyblue;
+  padding: 0px 40px;
+  font-size: 20px;
 }
-.add-button:hover{
-    background: lightblue;
+button {
+  width: 135px;
+  height: 35px;
+  margin-top: 0.3rem;
+  background: rgb(226, 94, 226);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
 }
 .wrapper {
-  display: grid;
-  place-content: center;
-  margin-bottom: 3rem;
-  padding: 0px 60px;
+  margin-top: 3rem;
 }
-.todo {
-  width: 400px;
-  height: 55px;
-  border-radius: 9px;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-.content {
+.text{
+  position: relative;
   width: 100%;
-  height: 15px;
-  border: 2px solid mediumslateblue;
+  height: 45px;
   border-radius: 9px;
-  display: flex;
-  justify-content: center;
-  padding: 20px 50px;
-}
-.deleteWrapper {
-  width: 100px;
-  height: 25px;
-}
-.delete-btn {
-  width: 190px;
-  height: 55px;
-  background: rgb(82, 82, 231);
-  border: none;
-  padding: 15px 0px;
-  border-radius: 9px;
-  text-align: center;
-  margin-left: -2.5rem;
+  border: 2px solid skyblue;
+  padding: 10px 40px;
+  font-size: 20px;
 }
 
-.delete-btn:hover {
-  background: blueviolet;
-  cursor: pointer;
-}
 
-@media(max-width:800px){
-    .todo-container{
-        display: grid;
-    }
-    input{
-        width: 100%;
-        height: 25px;
-    }
+@media(max-width:420px){
+  .task-input{
+     width: 200px;
+     padding-right: 330px;
+  }
+  input{
+    width: 300px;
+  }
+  .flex-input {
+     display: grid;
+  }
+  .wrapper{
+    display: grid;
+  }
+  .text{
+    width: 300px;
+  }
 }
