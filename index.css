@@ -27,7 +27,16 @@ input {
   padding: 0px 40px;
   font-size: 20px;
 }
-button {
+.add-btn{
+  width: 135px;
+  height: 35px;
+  margin-top: 0.3rem;
+  background: rgb(226, 94, 226);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.delete{
   width: 135px;
   height: 35px;
   margin-top: 0.3rem;

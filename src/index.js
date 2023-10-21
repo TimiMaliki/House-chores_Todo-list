@@ -1,5 +1,5 @@
 const addBtn = document.querySelector(".add-btn");
-const deleteButton = document.querySelector(".delete")
+
 import { initializeApp } from "firebase/app";
 
 import {
@@ -54,6 +54,7 @@ function getItems() {
 
 function generateItems(tasks) {
   let itemsHtml = "";
+  
 
   tasks.forEach((item) => {
     console.log(item);
@@ -61,52 +62,50 @@ function generateItems(tasks) {
     itemsHtml += `
 
    
-    <div class="wrapper flex-input">
+    <div class="flex-input data-id">
    
-       <div class="text" id="id">${item.text}</div>
-       ${deleteButton('delete')}
+       <div class="text">${item.text}</div>
     </div>
  
      `;
+
+  
   });
 
   document.querySelector(".wrapper").innerHTML = itemsHtml;
+
+  deleteButton(tasks)
 }
 
 getItems();
 
 
-deleteButton.addEventListener("click", (e)=>{
-  e.preventDefault();
-
-  console.log('hello')
-
-  let id = e.target.parentElement
-
-  console.log(id)
-
-
-})
 
 
 
 
 
-// function deleteButton() {
 
-//   document.querySelector(".delete").addEventListener("click", (e) => {
-//     e.preventDefault();
 
-//     let id = e.target.parentElement
 
-//   });
+function deleteButton(tasks) {
+
+  document.querySelector(".delete").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    tasks.forEach((item) => {
+
+
+
+      const deleteRef = doc(db, "task-todo", item.id);
+    
+      deleteDoc(deleteRef);
+    });
+
+    
+
+  });
   
-// }
+}
 
 
-// tasks.forEach((item) => {
-
-//   const deleteRef = doc(db, "task-todo", item.id);
-
-//   deleteDoc(deleteRef);
-// });
