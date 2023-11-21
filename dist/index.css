@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .title {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+  .todo-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  input {
+    width: 400px;
+    height: 55px;
+    position: relative;
+    padding: 0px 90px;
+    border: 1px solid mediumslateblue;
+    outline: none;
+    font-size: 19px;
+    border-radius: 12px;
+  }
+  input::placeholder {
+    font-size: 1rem;
+    padding: 0px 50px;
+
+  }
+  .add-button {
+    width: 120px;
+    height: 50px;
+    border-radius: 9px;
+    background: mediumslateblue;
+    border: none;
+    cursor: pointer;
+  }
+  .add-button:hover, .delete:hover{
+      background: lightblue;
+  }
+  .delete{
+    width: 125px;
+    height: 50px;
+    border-radius: 9px;
+    background: mediumslateblue;
+    border: none;
+    cursor: pointer;
+  }
+  .wrapper{
+    display: grid;
+    place-content: center;
+    height: auto;
+    margin-top: 3rem;
+  }
+  .wrapper ul{
+    list-style: none;
+  }
+  .wrapper li{
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    padding: 10px 90px;
+    border: 1px solid mediumslateblue;
+    outline: none;
+    font-size: 19px;
+    border-radius: 12px;
+  }
+
+  
+  @media(max-width:800px){
+      .todo-container{
+          display: grid;
+      }
+      .todo-input{
+        padding: 30px;
+      }
+      input{
+          width: 50%;
+          height: 45px;
+          margin-bottom: 40px;
+      }
+      .add-button {
+        width: 120px;
+        height: 50px;
+        border-radius: 9px;
+        background: mediumslateblue;
+        border: none;
+        cursor: pointer;
+      }
+  }
+  @media(max-width:400px){
+    .todo-container{
+        display: grid;
+    }
+    input{
+        width: 30%;
+        height: 45px;
+        margin-bottom: 40px;
+    }
+    input::placeholder {
+        font-size: 1rem;
+      }
+    .add-button {
+      width: 120px;
+      height: 50px;
+      border-radius: 9px;
+      background: mediumslateblue;
+      border: none;
+      cursor: pointer;
+    }
+}

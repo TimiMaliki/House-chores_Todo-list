@@ -1,5 +1,5 @@
 {
-  "name": "firebase",
+  "name": "yomi-firebase",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,6 +15,6 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "firebase": "^10.5.0"
+    "firebase": "^10.6.0"
   }
 }
